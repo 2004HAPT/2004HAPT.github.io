@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GoatAura — Sombreros &amp; Gorras</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<!-- ── NAVIGATION ── -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Goat<em>Aura</em></a>
+
+  
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+<!--
+    <li>
+      <a href="#">Ropa</a>
+      <ul class="dropdown">
+        <li><a href="Camisas.html">Camisas </a></li>
+        <li><a href="Conjuntos.html">Conjuntos</a></li>
+        <li><a href="Sudaderas.html">Sudaderas</a></li>
+        <li><a href="AbrigosChaquetas.html">Abrigos &amp; Chaquetas</a></li>
+        <li><a href="Pantalones.html">Pantalones</a></li>
+        <li><a href="Shorts.html">Shorts</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Calzado</a>
+      <ul class="dropdown">
+        <li><a href="Sneakers.html">Sneakers</a></li>
+        <li><a href="Chanclas.html">Chanclas</a></li>
+        <li><a href="Sandalias.html">Sandalias</a></li>
+      </ul>
+    </li>
+-->
+    <li>
+      <a href="#">Accesorios</a>
+      <ul class="dropdown">
+        <!-- <li><a href="MochilasCarteras.html">Mochilas &amp; Carteras</a></li> -->
+        <li><a href="SombrerosGorras.html">Sombreros &amp; Gorras</a></li>
+        <li><a href="Perfumes.html">Perfumes</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <a href="carrito.html" class="cart-nav-btn" id="cart-nav-btn" title="Ver carrito">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+      <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <path d="M16 10a4 4 0 0 1-8 0"/>
+    </svg>
+    <span class="cart-count" id="cart-count">0</span>
+  </a>
+</nav>
+
+<!-- ── PAGE HEADER ── -->
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a>
+      <span>/</span>
+      <a href="#">Accesorios</a>
+      <span>/</span>
+      <span class="breadcrumb-current">Sombreros &amp; Gorras</span>
+    </div>
+    <div class="page-header-titles">
+      <div class="sec-eyebrow">Colección</div>
+      <h1 class="page-title">Gorras</h1>
+    </div>
+    <p class="page-desc">Descubre nuestra colección de gorras, diseñadas para complementar tu estilo con un toque único. Calidad, comodidad y tendencia en cada modelo.</p>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════
+     FILA 1
+     ══════════════════════════════════════ -->
+<section class="catalog2">
+  <div class="sec-head reveal">
+    <div>
+      <div class="sec-eyebrow">Gorras</div>
+      <h2 class="sec-title"> <em style="color:#FA8072;">Obten nuevos modelos antes que se agoten.</em></h2>
+    </div>
+  </div>
+
+  <div class="catalog2-grid">
+
+    <!-- P1 -->
+    <div class="product-card reveal">
+      <div class="product-img product-carousel" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide active">
+            <img src="img/RUDEA-6.jpg.webp" alt="Gorra 1 — vista 1"/>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/RUDELALALA-1.webp" alt="Gorra 1 — vista 2"/>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-btn--prev" aria-label="Imagen anterior">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="carousel-btn carousel-btn--next" aria-label="Siguiente imagen">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="carousel-dots">
+          <button class="dot active" aria-label="Imagen 1"></button>
+          <button class="dot" aria-label="Imagen 2"></button>
+        </div>
+        <div class="carousel-counter"><span class="carousel-current">1</span> / <span class="carousel-total">2</span></div>
+        <span class="product-tag nuevo">Nuevo</span>
+      </div>
+      <div class="product-info">
+        <p class="product-cat">Gorras</p>
+        <h3 class="product-name">GORRA RUDE AWAKENINGS LALALA TRIPLE BLACK</h3>
+        <div class="product-price"><span>$699</span></div>
+        <button class="btn-add-cart" data-name="GORRA RUDE AWAKENINGS LALALA TRIPLE BLACK" data-price="699" data-cat="Gorras">+ Agregar</button>
+      </div>
+    </div>
+
+    <!-- P2 -->
+    <div class="product-card reveal">
+      <div class="product-img product-carousel" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide active">
+            <img src="img/gorritaSadboy.webp" alt="Gorra 2 — vista 1"/>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/gorrasadboybrillosback.webp" alt="Gorra 2 — vista 2"/>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-btn--prev" aria-label="Imagen anterior">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="carousel-btn carousel-btn--next" aria-label="Siguiente imagen">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="carousel-dots">
+          <button class="dot active" aria-label="Imagen 1"></button>
+          <button class="dot" aria-label="Imagen 2"></button>
+        </div>
+        <div class="carousel-counter"><span class="carousel-current">1</span> / <span class="carousel-total">2</span></div>
+        <span class="product-tag nuevo">Nuevo</span>
+      </div>
+      <div class="product-info">
+        <p class="product-cat">Gorras</p>
+        <h3 class="product-name">GORRA DANDY HATS x Junior H “$ad Boyz”</h3>
+        <div class="product-price"><span>$699</span></div>
+        <button class="btn-add-cart" data-name="GORRA DANDY HATS x Junior H “$ad Boyz”" data-price="699" data-cat="Gorras">+ Agregar</button>
+      </div>
+    </div>
+
+    <!-- P3 -->
+    <div class="product-card reveal">
+      <div class="product-img product-carousel" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide active">
+            <img src="img/gorra barbas ghost.webp" alt="Gorra 3 — vista 1"/>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/" alt="Gorra 3 — vista 2"/>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-btn--prev" aria-label="Imagen anterior">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="carousel-btn carousel-btn--next" aria-label="Siguiente imagen">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="carousel-dots">
+          <button class="dot active" aria-label="Imagen 1"></button>
+          <button class="dot" aria-label="Imagen 2"></button>
+        </div>
+        <div class="carousel-counter"><span class="carousel-current">1</span> / <span class="carousel-total">2</span></div>
+      </div>
+      <div class="product-info">
+        <p class="product-cat">Gorras</p>
+        <h3 class="product-name">GORRA EL BARBAS HATS SCREAM</h3>
+        <div class="product-price"><span>$699</span></div>
+        <button class="btn-add-cart" data-name="GORRA EL BARBAS HATS SCREAM" data-price="699" data-cat="Gorras">+ Agregar</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FILA 2
+     ══════════════════════════════════════ -->
+<section class="catalog2">
+  <div class="sec-head reveal">
+    <div>
+      <div class="sec-eyebrow">También te puede gustar</div>
+      <h2 class="sec-title">Más <em style="color:#FA8072;">estilos</em></h2>
+    </div>
+  </div>
+
+  <div class="catalog2-grid">
+
+    <!-- P4 -->
+    <div class="product-card reveal">
+      <div class="product-img product-carousel" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide active">
+            <img src="img/gorradandylalalaazul2.webp" alt="Gorra 4 — vista 1"/>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/dandylalalaazul.webp" alt="Gorra 4 — vista 2"/>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-btn--prev" aria-label="Imagen anterior">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="carousel-btn carousel-btn--next" aria-label="Siguiente imagen">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="carousel-dots">
+          <button class="dot active" aria-label="Imagen 1"></button>
+          <button class="dot" aria-label="Imagen 2"></button>
+        </div>
+        <div class="carousel-counter"><span class="carousel-current">1</span> / <span class="carousel-total">2</span></div>
+        <span class="product-tag oferta">Oferta</span>
+      </div>
+      <div class="product-info">
+        <p class="product-cat">Gorras</p>
+        <h3 class="product-name">GORRA HIDDEN STUDIOS LA GRACE</h3>
+        <div class="product-price"><span>$699</span><span class="price-old">$899</span></div>
+        <button class="btn-add-cart" data-name="GORRA HIDDEN STUDIOS LA GRACE" data-price="699" data-cat="Gorras">+ Agregar</button>
+      </div>
+    </div>
+
+    <!-- P5 -->
+    <div class="product-card reveal">
+      <div class="product-img product-carousel" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide active">
+            <img src="img/sadboyXdandy.webp" alt="Gorra 5 — vista 1"/>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/dandyxjuniorback.webp" alt="Gorra 5 — vista 2"/>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-btn--prev" aria-label="Imagen anterior">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="carousel-btn carousel-btn--next" aria-label="Siguiente imagen">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="carousel-dots">
+          <button class="dot active" aria-label="Imagen 1"></button>
+          <button class="dot" aria-label="Imagen 2"></button>
+        </div>
+        <div class="carousel-counter"><span class="carousel-current">1</span> / <span class="carousel-total">2</span></div>
+        <span class="product-tag nuevo">Nuevo</span>
+      </div>
+      <div class="product-info">
+        <p class="product-cat">Gorras</p>
+        <h3 class="product-name">DANDY HATS X JUNIOR H “COMO JORDAN</h3>
+        <div class="product-price"><span>$699</span></div>
+        <button class="btn-add-cart" data-name="DANDY HATS X JUNIOR H “COMO JORDAN" data-price="699" data-cat="Gorras">+ Agregar</button>
+      </div>
+    </div>
+
+    <!-- P6 -->
+    <div class="product-card reveal">
+      <div class="product-img product-carousel" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide active">
+            <img src="img/gorratraviscrema2.webp" alt="Gorra 6 — vista 1"/>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/traviscremaback.webp" alt="Gorra 6 — vista 2"/>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-btn--prev" aria-label="Imagen anterior">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="carousel-btn carousel-btn--next" aria-label="Siguiente imagen">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="carousel-dots">
+          <button class="dot active" aria-label="Imagen 1"></button>
+          <button class="dot" aria-label="Imagen 2"></button>
+        </div>
+        <div class="carousel-counter"><span class="carousel-current">1</span> / <span class="carousel-total">2</span></div>
+      </div>
+      <div class="product-info">
+        <p class="product-cat">Gorras</p>
+        <h3 class="product-name">GORRA INNEDIT “MURAWORLD” - Muratravis </h3>
+        <div class="product-price"><span>$699</span></div>
+        <button class="btn-add-cart" data-name="GORRA INNEDIT “MURAWORLD” - Muratravis " data-price="699" data-cat="Gorras">+ Agregar</button>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+<section class="catalog2">
+  <div class="sec-head reveal">
+    <div>
+      <div class="sec-eyebrow">También te puede gustar</div>
+      <h2 class="sec-title">Tendencias</h2>
+    </div>
+  </div>
+
+  <div class="catalog2-grid">
+
+    <!-- P4 -->
+    <div class="product-card reveal">
+      <div class="product-img product-carousel" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide active">
+            <img src="img/flowerfront.webp" alt="Gorra 4 — vista 1"/>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/travisflower.webp" alt="Gorra 4 — vista 2"/>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-btn--prev" aria-label="Imagen anterior">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="carousel-btn carousel-btn--next" aria-label="Siguiente imagen">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="carousel-dots">
+          <button class="dot active" aria-label="Imagen 1"></button>
+          <button class="dot" aria-label="Imagen 2"></button>
+        </div>
+        <div class="carousel-counter"><span class="carousel-current">1</span> / <span class="carousel-total">2</span></div>
+        <span class="product-tag oferta">Oferta</span>
+      </div>
+      <div class="product-info">
+        <p class="product-cat">Gorras</p>
+        <h3 class="product-name">GORRA INNEDIT MURATRAVIS FLOWER COLORS</h3>
+        <div class="product-price"><span>$699</span><span class="price-old">$899</span></div>
+        <button class="btn-add-cart" data-name="GORRA INNEDIT MURATRAVIS FLOWER COLORS" data-price="699" data-cat="Gorras">+ Agregar</button>
+      </div>
+    </div>
+
+    <!-- P5 -->
+    <div class="product-card reveal">
+      <div class="product-img product-carousel" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide active">
+            <img src="img/labubu.jpg" alt="Gorra 5 — vista 1"/>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/WhatsApp Image 2026-04-13 at 16.02.59.jpeg" alt="Gorra 5 — vista 2"/>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-btn--prev" aria-label="Imagen anterior">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="carousel-btn carousel-btn--next" aria-label="Siguiente imagen">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="carousel-dots">
+          <button class="dot active" aria-label="Imagen 1"></button>
+          <button class="dot" aria-label="Imagen 2"></button>
+        </div>
+        <div class="carousel-counter"><span class="carousel-current">1</span> / <span class="carousel-total">2</span></div>
+        <span class="product-tag nuevo">Nuevo</span>
+      </div>
+      <div class="product-info">
+        <p class="product-cat">Gorras</p>
+        <h3 class="product-name">HIDDEN STUDIOS LA-BUBU BLACK MENS SNAPBACK HAT</h3>
+        <div class="product-price"><span>$699</span></div>
+        <button class="btn-add-cart" data-name="HIDDEN STUDIOS LA-BUBU BLACK MENS SNAPBACK HAT" data-price="699" data-cat="Gorras">+ Agregar</button>
+      </div>
+    </div>
+
+    <!-- P6 -->
+    <div class="product-card reveal">
+      <div class="product-img product-carousel" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide active">
+            <img src="img/MURATRAVIS0011111.webp" alt="Gorra 6 — vista 1"/>
+          </div>
+          <div class="carousel-slide">
+            <img src="img/MURATRAVIS005.webp" alt="Gorra 6 — vista 2"/>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-btn--prev" aria-label="Imagen anterior">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="carousel-btn carousel-btn--next" aria-label="Siguiente imagen">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="carousel-dots">
+          <button class="dot active" aria-label="Imagen 1"></button>
+          <button class="dot" aria-label="Imagen 2"></button>
+        </div>
+        <div class="carousel-counter"><span class="carousel-current">1</span> / <span class="carousel-total">2</span></div>
+      </div>
+      <div class="product-info">
+        <p class="product-cat">Gorras</p>
+        <h3 class="product-name">GORRA INNEDIT MURATRAVIS 1ST ANIVERSARY</h3>
+        <div class="product-price"><span>$699</span></div>
+        <button class="btn-add-cart" data-name="GORRA INNEDIT MURATRAVIS 1ST ANIVERSARY" data-price="699" data-cat="Gorras">+ Agregar</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div>
+    <a href="index.html" class="footer-logo">GOAT<em>AURA</em></a>
+    <p class="footer-desc">Somos una tienda mayorista y minorista especializada en productos de primera calidad, ofreciendo una amplia variedad en ropa, perfumes y accesorios seleccionados para garantizar estilo, tendencia y durabilidad.</p>
+  </div>
+  <div>
+    <p class="footer-col-title">Colecciones</p>
+    <ul class="footer-links">
+      <!-- <li><a href="#">Ropa</a></li>
+      <li><a href="#">Calzado</a></li> -->
+      <li><a href="#">Accesorios</a></li>
+      <!-- <li><a href="#">Edición Limitada</a></li> -->
+    </ul>
+  </div>
+  <div>
+    <p class="footer-col-title">Ayuda</p>
+    <ul class="footer-links">
+      <li><a href="#">Guía de tallas</a></li>
+      <li><a href="#">Envíos &amp; Devoluciones</a></li>
+    </ul>
+  </div>
+  <div>
+    <p class="footer-col-title">Marca</p>
+    <ul class="footer-links">
+       <li><a href="https://www.tiktok.com/@benjaminvega2004" target="_blank">Tiktok</a></li>
+      <li><a href="https://www.instagram.com/goa.taura/" target="_blank">Instagram</a></li>
+      <li><a href="https://www.facebook.com/profile.php?fb_profile_edit_entry_point=%7B%22click_point%22%3A%22edit_profile_button%22%2C%22feature%22%3A%22profile_header%22%7D&id=61579567383874&sk=about" target="_blank">Facebook</a></li>
+      <li><a href="https://wa.me/525646952015" target="_blank">WhatsApp</a></li>
+    </ul>
+  </div>
+  
+  <div class="footer-bottom">
+    <span>© 2026 GOATAURA. Todos los derechos reservados.</span>
+    <span>Diseñado por Hugo Alberto Patiño Tun</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

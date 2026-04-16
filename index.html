@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catálogo StreetWear</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<!-- ── NAVIGATION ── -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">GOAT<em>AURA</em></a>
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="index.html" title="Inicio">Inicio</a></li>
+  <!-- 
+        <li>
+      <a href="#">Ropa</a>
+      <ul class="dropdown">
+        <li><a href="Camisas.html">Camisas </a></li>
+        <li><a href="Conjuntos.html">Conjuntos</a></li>
+        <li><a href="Sudaderas.html">Sudaderas</a></li>
+        <li><a href="AbrigosChaquetas.html">Abrigos &amp; Chaquetas</a></li>
+          <li><a href="Pantalones.html">Pantalones</a></li>
+          <li><a href="Shorts.html">Shorts</a></li>
+      </ul>
+    </li> -->
+
+   <!-- <li>
+      <a href="#">Calzado</a>
+      <ul class="dropdown">
+        <li><a href="Sneakers.html">Sneakers</a></li>
+        <li><a href="Chanclas.html">Chanclas</a></li>
+        <li><a href="Sandalias.html">Sandalias</a></li>
+      </ul>
+    </li>
+-->
+    <li>
+      <a href="#">Accesorios</a>
+      <ul class="dropdown">
+        <!-- <li><a href="MochilasCarteras.html">Mochilas &amp; Carteras</a></li> -->
+        <li><a href="SombrerosGorras.html">Sombreros &amp; Gorras</a></li>
+          <li><a href="Perfumes.html">Perfumes</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <a href="carrito.html" class="cart-nav-btn" id="cart-nav-btn" title="Ver carrito">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+      <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <path d="M16 10a4 4 0 0 1-8 0"/>
+    </svg>
+    <span class="cart-count" id="cart-count">0</span>
+  </a>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-image" title="Creed Aventus">
+    <video autoplay muted loop playsinline>
+      <source src="video/YTDown.com_YouTube_The-Legendary-Aventus_Media_yJlrUzczQTc_002_720p.mp4" type="video/mp4"/>
+    </video>
+  </div>
+  <div class="hero-text">
+    <div class="hero-line">
+      <span class="hero-eyebrow">Colección 2026</span>
+    </div>
+    <h1 class="hero-title" style="color: #D2D7DB;">
+     Nacido para <em>ganar</em>
+    </h1>
+    <p class="hero-desc">
+      Descubre nuestra selección de perfumes exclusivos.
+    </p>
+    <a href="#catalogo" class="btn-primary">
+      <span>Ver Catálogo</span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+    <div class="hero-counter">
+      <div class="hero-counter-num">49</div>
+      <div class="hero-counter-label">Piezas<br>nuevas</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CATALOG ── -->
+<section class="catalog" id="catalogo">
+  <div class="sec-head reveal">
+    <div>
+      <div class="sec-eyebrow">Catálogo</div>
+      <h2 class="sec-title">Selección<br><em style="color: #7F99B2;">destacada </em></h2>
+    </div>
+    <div class="filter-bar">
+      <!--<button class="filter-btn active">Todo</button>
+      <button class="filter-btn">Ropa</button>
+      <button class="filter-btn">Calzado</button>
+    -->
+      <button class="filter-btn">Accesorios</button>
+    </div>
+  </div>
+
+  <div class="products-grid">
+
+    <div class="product-card reveal">
+      <div class="product-img" title="Jean Paul Gaultier Le Male Le Parfum Edp Intense">
+        <img src="img/jeanpaulnegroportada.avif" alt="Jean Paul Gaultier Le Male Le Parfum Edp Intense 125ml"/>
+        <span class="product-tag nuevo">Nuevo</span>
+      </div>
+      <div class="product-info">
+        <p class="product-cat">Perfumes</p>
+        <h3 class="product-name">Jean Paul Gaultier Le Male Le
+Parfum Edp Intense 125ml</h3>
+        <div class="product-price"><span>$749</span></div>
+        <button class="btn-add-cart" data-name="Jean Paul Gaultier Le Male Le Parfum Edp Intense 125ml" data-price="749" data-cat="Perfumes">+ Agregar</button>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img" title="Dolce Gabanna Light Blue Summer Vibes">
+        <img src="img/dolcegabanaligthblue2.jpg" alt="Dolce & Gabanna Light Blue Summer Vibes 100 ml Edt"/>
+         <span class="product-tag oferta">Oferta</span>
+      </div>
+      <div class="product-info">
+        <p class="product-cat">Perfumes</p>
+        <h3 class="product-name">Dolce & Gabanna Light Blue Summer Vibes 100 ml Edt</h3>
+        <div class="product-price"><span>$749</span><span class="price-old">$1,699</span></div>
+        <button class="btn-add-cart" data-name="Dolce & Gabanna Light Blue Summer Vibes 100 ml Edt" data-price="749" data-cat="Perfumes">+ Agregar</button>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img" title="Hugos Boss Hugo Man">
+        <img src="img/hugobossazul3.avif" alt="Hugo Boss Hugo Man 125ml"/>
+        <span class="product-tag oferta">Oferta</span>
+      </div>
+      <div class="product-info">
+        <p class="product-cat">Perfumes</p>
+        <h3 class="product-name">Hugo Boss Hugo Man 125ml</h3>
+        <div class="product-price"><span>$749</span><span class="price-old">$1,599</span></div>
+        <button class="btn-add-cart" data-name="Hugo Boss Hugo Man 125ml" data-price="749" data-cat="Perfumes">+ Agregar</button>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img" title="Armaf Odyssey Limoni Fresh Hombre">
+        <img src="img/OdysseyLimoniFreshEditionArmafEdp60MlUnisexf3.webp" alt="Armaf Odyssey Limoni Fresh Edp 100 M1 Hombre"/>
+        <span class="product-tag nuevo">Nuevo</span>
+      </div>
+      <div class="product-info">
+        <p class="product-cat">Perfumes</p>
+        <h3 class="product-name">Armaf Odyssey Limoni Fresh Edp 100 M1 Hombre</h3>
+        <div class="product-price"><span>$749</span></div>
+        <button class="btn-add-cart" data-name="Armaf Odyssey Limoni Fresh Edp 100 M1 Hombre" data-price="749" data-cat="Perfumes">+ Agregar</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── STATS STRIP ── -->
+<div class="stats-strip reveal">
+  <div class="stat-item">
+    <div class="stat-num">49<span style="color: #7F99B2;">+</span></div>
+    <p class="stat-label">Piezas únicas</p>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">5<span style="color: #7F99B2;">k</span></div>
+    <p class="stat-label">Clientes satisfechos</p>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">5<span style="color: #7F99B2;">★</span></div>
+    <p class="stat-label">Alta calidad</p>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">3<span style="color: #7F99B2;">x</span></div>
+    <p class="stat-label">Temporadas consecutivas</p>
+  </div>
+</div>
+
+<!-- ── BANNER ── -->
+<section class="hero">
+  <div class="hero-image" title="Sauvage Dior">
+    <video autoplay muted loop playsinline>
+      <source src="video/Now Just $55 With Free ShippingLimited Run, Shop Now!.mp4" type="video/mp4"/>
+    </video>
+  </div>
+  <div class="hero-text">
+    <div class="hero-line">
+      <span class="hero-eyebrow">Colección 2026</span>
+    </div>
+    <h1 class="hero-title">
+      Marca<br>la<br><em style="color: #ff97d9;">diferencia</em>
+    </h1>
+    <p class="hero-desc">
+      Explora nuestra. variedad de diseñados para marcar la diferencia.
+    </p>
+    <a href="#catalogo" class="btn-primary">
+      <span>Explorar</span>
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
+    <div class="hero-counter" style="position:static; margin-top:28px;">
+      <div class="hero-counter-num">49</div>
+      <div class="hero-counter-label">Piezas<br>nuevas</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CATALOG 2 ── -->
+<section class="catalog2">
+  <div class="sec-head reveal">
+    <div>
+      <div class="sec-eyebrow"></div>
+      <h2 class="sec-title">Nuevos <em style="color: #D9CCC3;">ingresos</em></h2>
+    </div>
+  </div>
+  <div class="catalog2-grid">
+
+    <div class="product-card reveal">
+      <div class="product-img">
+        <img src="img/gorritaSadboy.webp" alt="GORRA DANDY HATS x Junior H “$ad Boyz"/>
+        <span class="product-tag nuevo">Nuevo</span>
+      </div>
+      <div class="product-info">
+        <p class="product-cat">Gorras</p>
+        <h3 class="product-name">GORRA DANDY HATS x Junior H “$ad Boyz</h3>
+        <div class="product-price"><span>$699</span></div>
+        <button class="btn-add-cart" data-name="GORRA DANDY HATS x Junior H “$ad Boyz" data-price="699" data-cat="Gorras">+ Agregar</button>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img">
+        <img src="img/sadboyXdandy.webp" alt="GORRA DANDY HATS X SAD BOYZ"/>
+        <span class="product-tag nuevo">Nuevo</span>
+      </div>
+      <div class="product-info">
+        <p class="product-cat">Gorras</p>
+        <h3 class="product-name">GORRA DANDY HATS X SAD BOYZ</h3>
+        <div class="product-price"><span>$699</span></div>
+        <button class="btn-add-cart" data-name="GORRA DANDY HATS X SAD BOYZ" data-price="699" data-cat="Gorras">+ Agregar</button>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="product-img">
+        <img src="img/gorramuratravis.webp" alt="GORRA INNEDIT MURATRAVIS 1ST ANIVERSARY"/>
+        <span class="product-tag nuevo">Nuevo</span>
+      </div>
+      <div class="product-info">
+        <p class="product-cat">Gorras</p>
+        <h3 class="product-name">GORRA INNEDIT MURATRAVIS 1ST ANIVERSARY</h3>
+        <div class="product-price"><span>$699</span></div>
+        <button class="btn-add-cart" data-name="GORRA INNEDIT MURATRAVIS 1ST ANIVERSARY" data-price="699" data-cat="Gorras">+ Agregar</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Pie de página ── -->
+<footer>
+  <div>
+    <a href="#" class="footer-logo">GOAT<em>AURA</em></a>
+    <p class="footer-desc">Somos una tienda mayorista y minorista especializada en productos de primera calidad, ofreciendo una amplia variedad en ropa, perfumes y accesorios seleccionados para garantizar estilo, tendencia y durabilidad.</p>
+  </div>
+  <div>
+    <p class="footer-col-title">Colecciones</p>
+    <ul class="footer-links">
+     <!-- <li><a href="#">Ropa</a></li>
+      <li><a href="#">Calzado</a></li>
+      <li><a href="#">Accesorios</a></li>
+    -->
+      <li><a href="#">Accesorios</a></li>
+    </ul>
+  </div>
+  <div>
+    <p class="footer-col-title">Ayuda</p>
+    <ul class="footer-links">
+        <li><a href="#">Guía de tallas</a></li>
+        <li><a href="#">Envíos &amp; Devoluciones</a></li>
+    </ul>
+  </div>
+  <div>
+    <p class="footer-col-title">Marca</p>
+    <ul class="footer-links">
+      <li><a href="https://www.tiktok.com/@benjaminvega2004" target="_blank">Tiktok</a></li>
+      <li><a href="https://www.instagram.com/goa.taura/" target="_blank">Instagram</a></li>
+      <li><a href="https://www.facebook.com/profile.php?fb_profile_edit_entry_point=%7B%22click_point%22%3A%22edit_profile_button%22%2C%22feature%22%3A%22profile_header%22%7D&id=61579567383874&sk=about" target="_blank">Facebook</a></li>
+      <li><a href="https://wa.me/525646952015" target="_blank">WhatsApp</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 GOATAURA. Todos los derechos reservados.</span>
+    <span>Diseñado por Hugo Alberto Patiño Tun</span>
+  </div>
+</footer>
+
+<!-- El script va al final del body, justo antes de cerrar -->
+<script src="main.js"></script>
+</body>
+</html>

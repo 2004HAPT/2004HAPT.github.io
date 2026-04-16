@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GoatAura — Carrito</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <!-- jsPDF desde CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<!-- ── NAV ── -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">GOAT<em>AURA</em></a>
+
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <!--  <li>
+      <a href="#">Ropa</a>
+      <ul class="dropdown">
+
+       <li><a href="Camisas.html">Camisas</a></li>
+        <li><a href="Conjuntos.html">Conjuntos</a></li>
+        <li><a href="Sudaderas.html">Sudaderas</a></li>
+        <li><a href="AbrigosChaquetas.html">Abrigos &amp; Chaquetas</a></li>
+        <li><a href="Pantalones.html">Pantalones</a></li>
+        <li><a href="Shorts.html">Shorts</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Calzado</a>
+      <ul class="dropdown">
+        <li><a href="Sneakers.html">Sneakers</a></li>
+        <li><a href="Chanclas.html">Chanclas</a></li>
+        <li><a href="Sandalias.html">Sandalias</a></li>
+      </ul>
+    </li> -->
+    <li>
+      <a href="#">Accesorios</a>
+      <ul class="dropdown">
+        <li><a href="SombrerosGorras.html">Sombreros &amp; Gorras</a></li>
+        <li><a href="Perfumes.html">Perfumes</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <a href="carrito.html" class="cart-nav-btn" id="cart-nav-btn" title="Ver carrito">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+      <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <path d="M16 10a4 4 0 0 1-8 0"/>
+    </svg>
+    <span class="cart-count" id="cart-count">0</span>
+  </a>
+</nav>
+
+<!-- ── CART PAGE ── -->
+<main class="cart-page">
+  <div class="cart-header reveal">
+    <div class="sec-eyebrow">Tu selección</div>
+    <h1 class="cart-title">Carri<em>to</em></h1>
+    <p class="cart-subtitle">Revisa tu selección y genera tu cotización en PDF</p>
+  </div>
+
+  <div class="cart-layout">
+    <!-- Items -->
+    <div>
+      <div class="cart-table-head">
+        <span>Producto</span>
+        <span>Cant.</span>
+        <span>Precio</span>
+        <span></span>
+      </div>
+
+      <div id="cart-items-container">
+        <!-- items rendered by JS -->
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="cart-summary">
+      <h2 class="summary-title">Resumen</h2>
+
+      <!-- Badge mayoreo 
+      <div id="summary-mayoreo-badge" class="mayoreo-badge" style="display:none">
+         ¡Descuento de mayoreo aplicado!
+      </div> -->
+
+      <div class="summary-row">
+        <span class="summary-label">Productos</span>
+        <span class="summary-value" id="summary-count">0</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">Piezas totales</span>
+        <span class="summary-value" id="summary-qty">0</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">Subtotal</span>
+        <span class="summary-value" id="summary-subtotal">$0</span>
+      </div>
+      <div class="summary-row" id="summary-descuento-row" style="display:none">
+        <!--<span class="summary-label" style="color:var(--accent)">Descuento 10%</span>
+        <span class="summary-value" id="summary-descuento" style="color:var(--accent)">-$0</span>
+        -->
+      </div>
+
+      <div class="summary-total">
+        <span class="summary-total-label">Total estimado</span>
+        <span class="summary-total-value" id="summary-total">$0</span>
+      </div>
+
+      <!-- <p class="mayoreo-hint" id="mayoreo-hint">Agrega 5+ piezas para obtener 15% de descuento por mayoreo.</p> -->
+
+      <button class="btn-pdf" id="btn-pdf">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="12" y1="18" x2="12" y2="12"/>
+          <line x1="9" y1="15" x2="15" y2="15"/>
+        </svg>
+        Cotizar · Enviar por WhatsApp
+      </button>
+
+      <button class="btn-clear" id="btn-clear">
+        Vaciar carrito
+      </button>
+    </div>
+  </div>
+</main>
+
+<!-- toast -->
+<div class="toast" id="toast"></div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div>
+    <a href="index.html" class="footer-logo">GOAT<em>AURA</em></a>
+    <p class="footer-desc">Somos una tienda mayorista y minorista especializada en productos de primera calidad, ofreciendo una amplia variedad en ropa, perfumes y accesorios seleccionados para garantizar estilo, tendencia y durabilidad.</p>
+  </div>
+  <div>
+    <p class="footer-col-title">Colecciones</p>
+    <ul class="footer-links">
+      <li><a href="#">Accesorios</a></li>
+    </ul>
+  </div>
+  <div>
+    <p class="footer-col-title">Ayuda</p>
+    <ul class="footer-links">
+      <li><a href="#">Guía de tallas</a></li>
+      <li><a href="#">Envíos &amp; Devoluciones</a></li>
+    </ul>
+  </div>
+  <div>
+    <p class="footer-col-title">Marca</p>
+    <ul class="footer-links">
+      <li><a href="https://www.tiktok.com/@benjaminvega2004" target="_blank">Tiktok</a></li>
+      <li><a href="https://www.instagram.com/goa.taura/" target="_blank">Instagram</a></li>
+      <li><a href="https://www.facebook.com/profile.php?fb_profile_edit_entry_point=%7B%22click_point%22%3A%22edit_profile_button%22%2C%22feature%22%3A%22profile_header%22%7D&id=61579567383874&sk=about" target="_blank">Facebook</a></li>
+      <li><a href="https://wa.me/525646952015" target="_blank">WhatsApp</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 GOATAURA. Todos los derechos reservados.</span>
+    <span>Diseñado por Hugo Alberto Patiño Tun</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
